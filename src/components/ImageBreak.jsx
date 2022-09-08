@@ -19,7 +19,7 @@ const ImageBreak = ({
 		opacity: 0.6,
 		borderRadius: "50%"
 	}
-    const insideStylesHov = {
+	const insideStylesHov = {
 		background: "rgb(255,255,255)",
 		padding: 20,
 		position: "absolute",
@@ -56,7 +56,7 @@ const ImageBreak = ({
 				<div style={{ height: imgheight }}>
 					{/* <div className="bg-white p-5 absolute top-2/4 left-1/2 translate-x-1/2 translate-y-1/2"> */}
 					<div
-						style={isHovering ? insideStylesHov: insideStyles }
+						style={isHovering ? insideStylesHov : insideStyles}
 						onMouseEnter={handleMouseEnter}
 						onMouseLeave={handleMouseLeave}
 					>
