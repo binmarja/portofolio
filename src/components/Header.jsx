@@ -7,22 +7,25 @@ const Header = () => {
 	const [nav, setNav] = useState(false)
 	const handleClick = () => setNav(!nav)
 	return (
-		<div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300">
-			<div>
+		<div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300  z-10">
+			<div className="z-20">
 				<img src={Logo} alt="logo image" style={{ width: "100px" }} />
 			</div>
 
 			{/* menu */}
+
 			<ul className="hidden md:flex">
+				
+
 				<li>
 					{" "}
-					<Link to="home" smooth={true} duration={500}>
+					<Link to="home" smooth={true} duration={1000}>
 						{"<Home />"}
 					</Link>
 				</li>
 				<li>
 					{" "}
-					<Link to="about" smooth={true} duration={500}>
+					<Link to="about" smooth={true} duration={1000}>
 						{"<About />"}
 					</Link>
 				</li>
