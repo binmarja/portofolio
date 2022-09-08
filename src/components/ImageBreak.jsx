@@ -38,7 +38,10 @@ const ImageBreak = ({
 			setIsHovering(false)
 		}
 		return (
-			<Parallax bgImage={image} strength={str}>
+			<Parallax
+				bgImage={image}
+				strength={str}
+			>
 				{/* renderLayer={(percentage) => (
 							<div
 								style={{
@@ -67,8 +70,14 @@ const ImageBreak = ({
 		)
 	}
 	return (
-		<Parallax bgImage={image} strength={str}>
-			<div style={{ height: imgheight }}>
+		<Parallax
+			bgImage={image}
+			strength={str}
+		>
+			<div
+				style={{ height: imgheight }}
+				className='hidden md:block'
+			>
 				{/* <div style={insideStyles}>Reverse direction</div> */}
 			</div>
 		</Parallax>
