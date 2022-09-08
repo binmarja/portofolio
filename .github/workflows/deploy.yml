@@ -5,30 +5,26 @@ name: Deploy CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
-  
-
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16.x'
-    - run:  npm i -g vite
-    - run: npm run build --if-present
-    
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.3.2
-      with:
-        server: ftp://jasser.me
-        username: ${{secrets.ftp_username}}
-        password: ${{ secrets.ftp_password }}
-  
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
+      - run: npm i
+      - run: npm run build --if-present
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.2
+        with:
+          server: ftp://jasser.me
+          username: ${{secrets.ftp_username}}
+          password: ${{ secrets.ftp_password }}
