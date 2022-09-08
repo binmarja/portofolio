@@ -27,6 +27,7 @@ function App() {
 				isText={false}
 			/>
 			<Work />
+			<ImageBreak image={ImagePCMug} />
 		</>
 	)
 }
