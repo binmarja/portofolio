@@ -7,12 +7,12 @@ const Header = () => {
 	const [nav, setNav] = useState(false)
 	const handleClick = () => setNav(!nav)
 	return (
-		<div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-background text-gray-300  z-10'>
+		<nav className='fixed backdrop-filter backdrop-blur-lg bg-opacity-20 w-full h-[60px] flex justify-between items-center px-4 bg-background text-gray-300  z-10'>
 			<div className='z-20'>
 				<img
 					src={Logo}
 					alt='logo image'
-					style={{ width: "80px" }}
+					style={{ width: "60px" }}
 				/>
 			</div>
 
@@ -44,7 +44,7 @@ const Header = () => {
 					<Link
 						to='work'
 						smooth={true}
-						duration={500}
+						duration={1000}
 					>
 						{"<Work />"}
 					</Link>
@@ -108,7 +108,7 @@ const Header = () => {
 				<li className='py-6 text-4xl'> {"<Education />"}</li>
 				<li className='py-6 text-4xl'> {"<Skills />"}</li>
 			</ul>
-		</div>
+		</nav>
 	)
 }
 
