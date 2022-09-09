@@ -20,12 +20,7 @@ const Job = ({
 		// }
 	}
 	return (
-		<motion.div
-			key={id}
-			variants={item}
-			whileHover={item.hover}
-			className=' flex justify-evenly flex-row  px-5 top-0 left-0 py-6 items-top w-full min-h-max'
-		>
+		<div className=' flex justify-evenly flex-row  px-5 top-0 left-0 py-6 items-top w-full min-h-max'>
 			<h1 className=' text-3xl sm:text-6xl text-[#ccd6f6] pr-2 font-bold'>
 				{jobTitle}
 			</h1>
@@ -38,7 +33,7 @@ const Job = ({
 					{jobDescreption}
 				</p>
 			</div>
-		</motion.div>
+		</div>
 	)
 	//
 }

@@ -1,6 +1,6 @@
 import React from "react"
 
-import { motion } from "framer-motion"
+// import { motion } from "framer-motion"
 import Job from "./Job"
 
 function Work({
@@ -25,38 +25,30 @@ function Work({
 		}
 	]
 }) {
-	const container = {
-		hidden: { opacity: 0 },
-		show: {
-			opacity: 1,
-			transition: {
-				duration: 2,
-				type: "tween"
-				// when: "beforeChildren"
-			}
-		}
-	}
-	const item = {
-		hidden: { opacity: 0 },
-		show: {
-			opacity: 1
-		}
-	}
+	// const container = {
+	// 	hidden: { opacity: 0 },
+	// 	show: {
+	// 		opacity: 1,
+	// 		transition: {
+	// 			duration: 2,
+	// 			type: "tween"
+	// 			// when: "beforeChildren"
+	// 		}
+	// 	}
+	// }
+	// const item = {
+	// 	hidden: { opacity: 0 },
+	// 	show: {
+	// 		opacity: 1
+	// 	}
+	// }
 	return (
-		<div className=' bg-[#0a192f]'>
-			<motion.div
-				name='work'
-				variants={container}
-				initial='hidden'
-				animate='show'
-			>
-				<motion.h1
-					variants={item}
-					className=' w-full text-center sm:text-4xl capitalize text-[#ccd6f6] pt-14 font-bold'
-				>
+		<div className=' bg-background'>
+			<div name='work'>
+				<h1 className=' w-full text-center sm:text-4xl capitalize text-[#ccd6f6] pt-14 font-bold'>
 					{" "}
 					Work Experiance
-				</motion.h1>
+				</h1>
 
 				{jobs.map((job, id) => {
 					{
@@ -73,7 +65,7 @@ function Work({
 						/>
 					)
 				})}
-			</motion.div>
+			</div>
 		</div>
 	)
 }
