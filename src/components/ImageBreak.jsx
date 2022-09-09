@@ -76,7 +76,7 @@ const ImageBreak = ({
 		>
 			<div
 				style={{ height: imgheight }}
-				className='hidden md:block'
+				className='hidden md:inline-flex'
 			>
 				{/* <div style={insideStyles}>Reverse direction</div> */}
 			</div>
