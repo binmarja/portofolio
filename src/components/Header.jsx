@@ -12,7 +12,7 @@ const Header = () => {
 				<img
 					src={Logo}
 					alt='logo image'
-					style={{ width: "60px" }}
+					style={{ width: "80px" }}
 				/>
 			</div>
 
